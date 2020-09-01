@@ -1,0 +1,107 @@
+﻿@model Studentgrade.Models.Class1
+@{
+    Layout = null;
+}
+
+<head>
+    <title>
+
+    </title>
+</head>
+
+@using (Html.BeginForm("index", "Home", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+   @Html.AntiForgeryToken()
+    <center>
+            <table style="border:#000 3px solid;padding:10px 40px 40px 40px;background-color:yellow;width:35%">
+                <tr>
+                    <td>
+                        Subject
+                    </td>
+                    <td>
+                        &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+                    </td>
+                    <td>
+                          Score
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                         &nbsp;Java
+                    </td>
+                    <td>
+                        &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+                    </td>
+                    <td width="10">
+                       @Html.TextBoxFor(m=> m.java, new { @class = "form-control" })
+                      
+                    </td>
+                  
+                </tr>
+                <tr>
+                    <td>
+                        &nbsp;Sql
+                    </td>
+                    <td>
+                        &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+                    </td>
+                    <td>
+                        @Html.TextBoxFor(m => m.sql, new { @class = "form-control" })
+
+                    </td>
+                   
+                </tr>
+                <tr>
+                    <td>
+                        &nbsp;Andriod
+                    </td>
+                    <td>
+                        &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+                    </td>
+                    <td>
+                        @Html.TextBoxFor(m => m.andriod, new { @class = "form-control" })
+
+                    </td>
+                  
+                </tr>
+                <tr>
+                    <td>
+                        &nbsp;LB
+                    </td>
+                    <td>
+                        &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+                    </td>
+                    <td>
+                        @Html.TextBoxFor(m => m.lb, new { @class = "form-control" })
+
+                    </td>
+                   
+                </tr>
+                <tr>
+                    <td>
+                         &nbsp;Excel
+                    </td>
+                    <td>
+                        &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+                    </td>
+                    <td  >
+                        @Html.TextBoxFor(m => m.excel, new { @class = "form-control"})
+
+                    </td>
+                 
+                </tr>
+                <tr>
+
+                    <td>
+                        &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+                    <td >
+                        <input type="submit" name="button" value="Generate result"   />
+                    </td>
+                </tr>
+            </table>
+        <DIV> @Html.ValidationSummary("", new { @class = "text-danger" })</DIV> 
+
+
+    </center>
+
+}
